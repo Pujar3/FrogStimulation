@@ -1,24 +1,23 @@
 public class FrogSimulation {
     private int goalDistance;
     private int maxHops;
-    private int sumHops;
-    private int numHops;
     private int counter;
 
     public FrogSimulation(int dist, int numHops)
     {
         goalDistance = dist;
         maxHops = numHops;
-
     }
 
     private int hopDistance()
     {
-        return (int) (Math.random() * 10) - 5;
+        return (int) (Math.random() * 10) - 4;
     }
 
     public boolean simulate(){
-        while (sumHops < goalDistance && sumHops >= 0 && numHops <= maxHops)
+        int sumHops = 0;
+        int numHops = 0;
+        while (sumHops < goalDistance && sumHops >= 0 && numHops < maxHops)
         {
             sumHops += hopDistance();
             numHops++;
@@ -31,17 +30,17 @@ public class FrogSimulation {
         {
             return false;
         }
-
     }
     public double runSimulations (int num)
     {
-        for (int i = 0; i == num; i++)
+        counter = 0;
+        for (int i = 0; i < num; i++)
         {
             if(simulate())
             {
                 counter++;
             }
         }
-        return (double) counter/num;
+        return (double) counter / num;
     }
 }

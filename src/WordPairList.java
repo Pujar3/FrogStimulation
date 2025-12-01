@@ -7,9 +7,9 @@ public class WordPairList {
         allPairs = new ArrayList<WordPair>();
         for(int i = 0; i < words.length; i++)
         {
-            for(int j = 0; j < words.length; j++)
+            for(int j = i + 1; j < words.length; j++)
             {
-                allPairs.add(new WordPair(words[i], words[j]);
+                allPairs.add(new WordPair(words[i], words[j]));
             }
         }
     }
@@ -19,7 +19,7 @@ public class WordPairList {
             if (allPairs.get(i).getFirst().equals(allPairs.get(i).getSecond())) {
                 counter++;
             }
-            return counter;
         }
+        return counter;
     }
 }
