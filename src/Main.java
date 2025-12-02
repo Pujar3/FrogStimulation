@@ -1,11 +1,13 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         FrogSimulation sim = new FrogSimulation(24, 5);
-        System.out.println(sim.simulate());
+        System.out.println("sim " + sim.simulate());
 
         String[] wordNums = {"one", "two", "three"};
         WordPairList exampleOne = new WordPairList(wordNums);
-        System.out.println(exampleOne.numMatches());
+        System.out.println(exampleOne.numMatches() + " e1");
 
         String[] phrase = {"the", "more", "the", "merrier"};
         WordPairList exampleTwo = new WordPairList(phrase);
@@ -13,7 +15,7 @@ public class Main {
 
         String[] moreWords = {"the", "red", "fox", "the", "red"};
         WordPairList exampleThree = new WordPairList(moreWords);
-        System.out.println(exampleThree.numMatches());
+        System.out.println(exampleThree.numMatches() + "e3");
 
 
         StringChecker sc1 = new CodeWordChecker(5, 8, "$");
@@ -34,7 +36,7 @@ public class Main {
                 {9, 5, 3}};
 
         int[] result = ArrayTester.getColumn(arr2D, 1);
-        System.out.println(result);
+        System.out.println(Arrays.toString(result));
 
     }
 }
