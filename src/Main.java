@@ -38,5 +38,34 @@ public class Main {
         int[] result = ArrayTester.getColumn(arr2D, 1);
         System.out.println(Arrays.toString(result));
 
+        int[][] Latin1 = {{1, 2, 3},
+                {2, 3, 1},
+                {3, 1, 2}};
+
+        int[][] Latin2 = {{10, 30, 20, 0},
+                {0, 20, 30, 10},
+                {30, 0, 10, 20},
+                {20, 10, 0, 30}};
+
+        int[][] notLatin1 = {{1, 2, 1},
+                {2, 1, 1},
+                {1, 1, 2}};
+
+        int[][] notLatin2 = {{1, 2, 3},
+                {3, 1, 2},
+                {7, 8, 9}};
+
+        int[][] notLatin3 = {{1, 2,},
+                {1, 2}};
+
+        System.out.println(ArrayTester.isLatin(Latin1));
+        System.out.println(ArrayTester.isLatin(Latin2));
+        System.out.println(ArrayTester.isLatin(notLatin1));
+        System.out.println(ArrayTester.isLatin(notLatin2));
+        System.out.println(ArrayTester.isLatin(notLatin3));
+
+
+
     }
+
 }

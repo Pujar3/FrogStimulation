@@ -19,7 +19,9 @@ public class FrogSimulation {
         int numHops = 0;
         while (sumHops < goalDistance && sumHops >= 0 && numHops < maxHops)
         {
-            sumHops += hopDistance();
+            int temp = hopDistance();
+            System.out.println(temp);
+            sumHops += temp;
             numHops++;
         }
         if (sumHops >= goalDistance)
